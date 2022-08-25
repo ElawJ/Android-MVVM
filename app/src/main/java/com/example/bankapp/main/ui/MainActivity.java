@@ -1,26 +1,32 @@
 package com.example.bankapp.main.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.bankapp.Login.LoginActivity;
 import com.example.bankapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    ActivityMainBinding binding;
+    ActivityMainBinding mBinding;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        mBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(mBinding.getRoot());
         MainViewModel mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        mainViewModel.txtName.observe(this, binding.txtMain::setText);
-        binding.txtMain.setOnClickListener(view -> {
-            mainViewModel.onClickName();
+        //mainViewModel.txtName.observe(this, binding.btnMain::setText);
+        mBinding.btnMain.setOnClickListener(view -> openLogin());
+    }
 
-             });
+    private void openLogin() {
+        Intent intent = new Intent(this, LoginActivity.class);
+       // intent.putExtra("IS_LOGGED_in", true);
+        //intent.getBooleanExtra("IS_Logged_in", false)
+        startActivity(intent);
     }
 }

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BankApp</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_username">Enter UserName...</string>
+    <string name="image_of_logo">Image of logo</string>
+    <string name="go_to_login">Go To Login</string>
 </resources>
