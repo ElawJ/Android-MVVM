@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(mBinding.getRoot());
         MainViewModel mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
         //mainViewModel.txtName.observe(this, binding.btnMain::setText);
-        mBinding.btnMain.setOnClickListener(view -> openLogin());
+        mBinding.layoutMain.btnMain.setOnClickListener(view -> openLogin());
     }
 
     private void openLogin() {
