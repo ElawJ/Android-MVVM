@@ -4,4 +4,7 @@
     <string name="enter_username">Enter UserName...</string>
     <string name="image_of_logo">Image of logo</string>
     <string name="go_to_login">Go To Login</string>
+    <string name="err_password">Please enter password!</string>
+    <string name="err_username">Please enter a username!</string>
+    <string name="err_login">invalid user name and password</string>
 </resources>
