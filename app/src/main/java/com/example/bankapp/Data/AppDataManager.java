@@ -12,14 +12,14 @@ public class AppDataManager implements DataManager{
     }
 
     @Override
-    public void setNameState(Boolean isFather) {
-        mPrefHelper.setNameState(isFather);
+    public void setLogin(Boolean isLogin) {
+        mPrefHelper.setLogin(isLogin);
 
     }
 
     @Override
-    public Boolean getNameState() {
-        return mPrefHelper.getNameState();
+    public Boolean getLogin() {
+        return mPrefHelper.getLogin();
     }
 
     @Override
